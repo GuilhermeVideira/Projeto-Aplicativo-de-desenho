@@ -8,10 +8,40 @@
     <link rel="stylesheet" href="components/loader.css">
     <link rel="stylesheet" href="css/style.css">
     <script>
+    window.onload = function(){
+     var largura = 1000
+     var altura = 1000
+
+     var quadro = document.getElementById('quadro')
+     quadro.setAttribute("width", largura)
+     quadro.setAttribute("height", altura)
+
+     var ctx = quadro.getContext("2d")
+ 
+     var desenhando = false
+    
+    quadro.onmousedown = function(evt){
+     ctx.moveTo(evt.clientX, evt.clientY)
+     desenhando = true
+    }
+
+    quadro.onmouseup = function() {
+       desenhando = false
+    }
+
+    quadro.onmousemove = function(evt) {
+      if(desenhando == true)
+      ctx.lineTo(evt.clientX, evt.clientY)
+      ctx.stroke()
+
+    }
+}
+
     </script>
 </head>
 <body>
-	<br />
-    This is a template for Monaca app.
+
+    <canvas id="quadro" style="background: blue"> </canvas>
+
 </body>
 </html>
