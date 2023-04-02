@@ -4,49 +4,29 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <meta http-equiv="Content-Security-Policy" content="default-src * data: gap: content: https://ssl.gstatic.com; style-src * 'unsafe-inline'; script-src * 'unsafe-inline' 'unsafe-eval'">
+
     <script src="components/loader.js"></script>
+
     <link rel="stylesheet" href="components/loader.css">
+
     <link rel="stylesheet" href="css/style.css">
-    <script>
-    window.onload = function(){
-     var largura = 1000
-     var altura = 1000
 
-     var quadro = document.getElementById('quadro')
-     quadro.setAttribute("width", largura)
-     quadro.setAttribute("height", altura)
-
-     var ctx = quadro.getContext("2d")
- 
-     var desenhando = false
-    
-    quadro.onmousedown = function(evt){
-     ctx.moveTo(evt.clientX, evt.clientY)
-     desenhando = true
-    }
-
-    quadro.onmouseup = function() {
-       desenhando = false
-    }
-
-    quadro.onmousemove = function(evt) {
-      if(desenhando == true)
-      ctx.lineTo(evt.clientX, evt.clientY)
-      ctx.stroke()
-
-    }
-    
-    
-    
-    
-
-}
-
-    </script>
 </head>
 <body>
 
-    <canvas id="quadro" style="background: blue"> </canvas>
+<br> <span class="texto01"> 🎨 Aplicativo de desenho </span> <br> <br> <br>
+
+<button onclick='limpar()' class='button' id='Limpar'>Limpar tudo</button>
+<button onclick='apagar()' class='button' id='Apagar'>Apagar</button>
+<button onclick='desfazer()' class='button' id='Desfazer'>Desfazer</button> <br><br><br>
+
+<span class="texto02"> 🖌 Louza: </span> <br><br>
+
+<canvas  id="quadro" style="background: #eee"> </canvas>
+
+<script src="js/main.js"></script>
+
+
 
 </body>
 </html>
