@@ -1,51 +1,14 @@
      
 function desfazer() {
-
-    if (desenhando <= 0) {
-
-        clear_canvas();
-
-    } else {
-
-        desenhando -= 1;
-        restore_array.pop();
-        context.putImageData(restore_array[desenhando], 0, 0);
-
-    }
+    
 }
 
 function limpar() {
 
-//control + z
-
-document.addEventListener('keydown', function(evt) {
-
-    if (evt.ctrlKey && evt.key === 'z') {
-        undo();
-    }
-
-});
-
 }
 
 function apagar() {
-
-//Borracha
-
-if (tool_select == 'apagar') {
-
-            context.lineTo(evt.clientX - canvas.offsetLeft, evt.clientY - canvas.offsetTop);
-
-            context.globalCompositeOperation = "destination-out";
-
-            context.lineWidth = draw_width;
-
-            context.lineCap = line_cap;
-
-            context.lineJoin = line_cap;
-
-            context.stroke();
-        }
+ 
 }
      
      window.onload = function(){
@@ -95,5 +58,34 @@ if (tool_select == 'apagar') {
     ctx.stroke();
     evt.preventDefault()
 })
+
+  //Quadrados 
+  ctx.fillStyle = "rgb(200,0,0)";
+  ctx.fillRect (10, 10, 55, 50);
+  ctx.fillStyle = "rgb(200,0,0)";
+  ctx.fillRect (30, 10, 55, 50);
+  ctx.fillStyle = "rgb(200,0,0)";
+  ctx.fillRect (50, 10, 55, 50);
+  ctx.fillStyle = "rgb(200,0,0)";
+  ctx.fillRect (70, 10, 55, 50);
+  ctx.fillStyle = "rgb(200,0,0)";
+  ctx.fillRect (90, 10, 55, 50);
+  ctx.fillStyle = "rgb(200,0,0)";
+  ctx.fillRect (110, 10, 55, 50);
+  ctx.fillStyle = "rgb(200,0,0)";
+  ctx.fillRect (130, 10, 55, 50);
+  ctx.fillStyle = "rgb(200,0,0)";
+  ctx.fillRect (150, 10, 55, 50);
+  ctx.fillStyle = "rgb(200,0,0)";
+  ctx.fillRect (170, 10, 55, 50);
+  ctx.fillStyle = "rgb(200,0,0)";
+  ctx.fillRect (190, 10, 55, 50);
+  
+  //Texto
+  ctx.font = '48px serif';
+  ctx.strokeText('Hello world', 10, 50);
+  ctx.font = '28px serif';
+  ctx.strokeText('Faça um desenho:', 10, 100);
+
 
 }
