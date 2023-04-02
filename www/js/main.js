@@ -1,6 +1,56 @@
+     
+function desfazer() {
+
+    if (desenhando <= 0) {
+
+        clear_canvas();
+
+    } else {
+
+        desenhando -= 1;
+        restore_array.pop();
+        context.putImageData(restore_array[desenhando], 0, 0);
+
+    }
+}
+
+function limpar() {
+
+//control + z
+
+document.addEventListener('keydown', function(evt) {
+
+    if (evt.ctrlKey && evt.key === 'z') {
+        undo();
+    }
+
+});
+
+}
+
+function apagar() {
+
+//Borracha
+
+if (tool_select == 'apagar') {
+
+            context.lineTo(evt.clientX - canvas.offsetLeft, evt.clientY - canvas.offsetTop);
+
+            context.globalCompositeOperation = "destination-out";
+
+            context.lineWidth = draw_width;
+
+            context.lineCap = line_cap;
+
+            context.lineJoin = line_cap;
+
+            context.stroke();
+        }
+}
+     
      window.onload = function(){
-     var largura = 1000
-     var altura = 900
+     var largura = 377
+     var altura = 600
 
      var quadro = document.getElementById('quadro')
      quadro.setAttribute("width", largura)
@@ -46,28 +96,4 @@
     evt.preventDefault()
 })
 
-
 }
-
-function desfazer() {
-
-    if (desenhando <= 0) {
-
-        clear_canvas();
-
-    } else {
-
-        desenhando -= 1;
-        restore_array.pop();
-        context.putImageData(restore_array[desenhando], 0, 0);
-
-    }
-}
-
-
-
-
-
-
-
-
