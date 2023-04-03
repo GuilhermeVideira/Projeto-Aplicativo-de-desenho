@@ -4,7 +4,8 @@ function desfazer() {
 }
 
 function limpar() {
-
+         var ctx = quadro.getContext("2d")
+ctx.clearRect(0, 0, quadro.width, quadro.height);
 }
 
 function apagar() {
