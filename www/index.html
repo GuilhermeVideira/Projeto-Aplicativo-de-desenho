@@ -1,32 +1,31 @@
-<!DOCTYPE HTML>
-<html>
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-    <meta http-equiv="Content-Security-Policy" content="default-src * data: gap: content: https://ssl.gstatic.com; style-src * 'unsafe-inline'; script-src * 'unsafe-inline' 'unsafe-eval'">
+<!DOCTYPE html>
+<html lang="pt-BR">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <script src="components/loader.js"></script>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;500&display=swap" rel="stylesheet" />
 
-    <link rel="stylesheet" href="components/loader.css">
+<link rel="shortcut icon" href="./imagens/Menino.png" type="image/x-icon"> 
+ 
+		<link rel="stylesheet" href="./css/estilos.css">
+	</head>
 
-    <link rel="stylesheet" href="css/style.css">
+	<body>
 
-</head>
-<body>
+         <div class="texto"> <span class="texto01"> Aplicativo de desenho </span> </div>
 
-<br> <span class="texto01"> 🎨 Aplicativo de desenho </span> <br> <br> <br>
+		<header class="cabecalho">
+			<a>	<img class="logo" src="./imagens/Menino.png" alt="Desenho" /> </a>
+		</header>
 
-<button onclick='limpar()' class='button' id='Limpar'>Limpar tudo</button>
-<button onclick='apagar()' class='button' id='Apagar'>Apagar</button>
-<button onclick='desfazer()' class='button' id='Desfazer'>Desfazer</button> <br><br><br>
+		<main class="container">
+            <a href="./louza.html"> <button class="botao">Ir para a louza</button> </a>
+		</main>
 
-<center>
-<span class="texto02"> Louza: </span> <br><br>
-
-<canvas  id="quadro" style="background: #eee"> </canvas>
-</center> 
-
-<script src="js/main.js"></script>
-
-</body>
+		<script src="./src/js/index.js"></script>
+	</body>
 </html>

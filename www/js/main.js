@@ -1,17 +1,14 @@
      
 function desfazer() {
-    
+
 }
 
 function limpar() {
-         var ctx = quadro.getContext("2d")
+var ctx = quadro.getContext("2d")
 ctx.clearRect(0, 0, quadro.width, quadro.height);
 }
 
-function apagar() {
- 
-}
-     
+
      window.onload = function(){
      var largura = 377
      var altura = 600
@@ -21,10 +18,11 @@ function apagar() {
      quadro.setAttribute("height", altura)
 
      var ctx = quadro.getContext("2d")
+     var texto = quadro.getContext("2d")
  
      var desenhando = false
     
-    quadro.onmousedown = function(evt){
+     quadro.onmousedown = function(evt){
      ctx.moveTo(evt.clientX, evt.clientY)
      desenhando = true
     }
@@ -61,32 +59,44 @@ function apagar() {
 })
 
   //Quadrados 
-  ctx.fillStyle = "rgb(200,0,0)";
-  ctx.fillRect (10, 10, 55, 50);
-  ctx.fillStyle = "rgb(200,0,0)";
-  ctx.fillRect (30, 10, 55, 50);
-  ctx.fillStyle = "rgb(200,0,0)";
-  ctx.fillRect (50, 10, 55, 50);
-  ctx.fillStyle = "rgb(200,0,0)";
-  ctx.fillRect (70, 10, 55, 50);
-  ctx.fillStyle = "rgb(200,0,0)";
-  ctx.fillRect (90, 10, 55, 50);
-  ctx.fillStyle = "rgb(200,0,0)";
-  ctx.fillRect (110, 10, 55, 50);
-  ctx.fillStyle = "rgb(200,0,0)";
-  ctx.fillRect (130, 10, 55, 50);
-  ctx.fillStyle = "rgb(200,0,0)";
-  ctx.fillRect (150, 10, 55, 50);
-  ctx.fillStyle = "rgb(200,0,0)";
-  ctx.fillRect (170, 10, 55, 50);
-  ctx.fillStyle = "rgb(200,0,0)";
-  ctx.fillRect (190, 10, 55, 50);
+  texto.fillStyle = "rgb(200,0,0)";
+  texto.fillRect (10, 10, 55, 50);
+  texto.fillStyle = "rgb(200,0,0)";
+  texto.fillRect (30, 10, 55, 50);
+  texto.fillStyle = "rgb(200,0,0)";
+  texto.fillRect (50, 10, 55, 50);
+  texto.fillStyle = "rgb(200,0,0)";
+  texto.fillRect (70, 10, 55, 50);
+  texto.fillStyle = "rgb(200,0,0)";
+  texto.fillRect (90, 10, 55, 50);
+  texto.fillStyle = "rgb(200,0,0)";
+  texto.fillRect (110, 10, 55, 50);
+  texto.fillStyle = "rgb(200,0,0)";
+  texto.fillRect (130, 10, 55, 50);
+  texto.fillStyle = "rgb(200,0,0)";
+  texto.fillRect (150, 10, 55, 50);
+  texto.fillStyle = "rgb(200,0,0)";
+  texto.fillRect (170, 10, 55, 50);
+  texto.fillStyle = "rgb(200,0,0)";
+  texto.fillRect (190, 10, 55, 50);
+  texto.fillStyle = "rgb(200,0,0)";
+  texto.fillRect (210, 10, 55, 50);
+  texto.fillStyle = "rgb(200,0,0)";
+  texto.fillRect (230, 10, 55, 50);
+  texto.fillStyle = "rgb(200,0,0)";
+  texto.fillRect (250, 10, 55, 50);
+  texto.fillStyle = "rgb(200,0,0)";
+  texto.fillRect (270, 10, 55, 50);
+  texto.fillStyle = "rgb(200,0,0)";
+  texto.fillRect (290, 10, 55, 50);
+  texto.fillStyle = "rgb(200,0,0)";
+  texto.fillRect (310, 10, 55, 50);
   
   //Texto
-  ctx.font = '48px serif';
-  ctx.strokeText('Hello world', 10, 50);
-  ctx.font = '28px serif';
-  ctx.strokeText('Faça um desenho:', 10, 100);
+  texto.font = '35px serif';
+  texto.strokeText('Aplicativo de desenho', 30, 50);
+  texto.font = '28px serif';
+  texto.strokeText(' 🎨 Faça um desenho:', 10, 100);
 
 
 }

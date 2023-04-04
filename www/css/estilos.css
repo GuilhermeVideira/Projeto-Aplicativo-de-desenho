@@ -1,0 +1,69 @@
+body {
+    font-family: 'Poppins';
+}
+
+.texto01 {font-family: Berlin; 
+    color: #eee;  
+    font-size: 30px} 
+
+.texto {
+    top: 50px;
+    left: 60px;
+    position: absolute;
+}
+
+.cabecalho {
+    display: flex;
+    justify-content: space-between;
+    padding: 100px;
+
+}
+.cabecalho .logo {
+    width: 465px;
+}
+
+.container {
+    display: flex;
+}
+
+
+.container .botao {
+    background-color: #000000;
+    color: #ffffff;
+    padding: 15px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    text-transform: uppercase;
+    transition: 0.5s all ease-in-out;
+}
+
+.container .botao:hover {
+    transform: scale(1.1)
+}
+
+
+@media (max-width: 1200px) {
+    body {
+      background: #000000;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #434343, #000000);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #434343, #000000); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    }
+
+    .container {
+        flex-wrap: wrap;
+        justify-content: center;
+        height: auto;
+        gap: 310px;
+    }
+
+}
+
+@media (max-width: 500px) {
+    .cabecalho {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+}

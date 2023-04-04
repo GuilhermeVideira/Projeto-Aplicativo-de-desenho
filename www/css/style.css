@@ -21,3 +21,23 @@ background: linear-gradient(to right, #434343, #000000); /* W3C, IE 10+/ Edge, F
     border:15px solid #000;
 }
 
+.botoes {
+    top: 660px;
+    left: 250px;
+    position: absolute;
+}
+
+.botao{
+  background-color: #000000;
+    color: #ffffff;
+    padding: 15px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+}
+
+
+
+
+
